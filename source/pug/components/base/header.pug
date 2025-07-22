@@ -18,8 +18,7 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods)
     .container
       if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        +icon("logo", 118, 39)
       else
         a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
       nav.main-nav
