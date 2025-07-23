@@ -1,0 +1,28 @@
+.detail + .detail {
+  padding-left: 47px;
+  border-left: 1px solid #ececec;
+
+  &:last-child {
+    padding-right: 0;
+
+    .detail__heading {
+      padding-right: 0
+    }
+  }
+}
+
+.detail__heading {
+  padding: 6px 48px 6px 0;
+  color: #bababa;
+  line-height: 19px;
+
+  svg {
+    position: static;
+    margin-left: 23px;
+  }
+
+  &::marker {
+    display: none;
+    content: "";
+  }
+}

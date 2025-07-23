@@ -1,10 +1,33 @@
 .header {
-  padding: 28px 0;
+  padding: 45px 0;
 
-  background-color: $color-neon-blue;
+  background-color: $color-default-white;
+
+  &__container + &__container {
+    position: relative;
+    margin-top: 38px;
+    padding-top: 46px;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 0.7px;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #eaeaea;
+    }
+
+  }
+
+  svg {
+    position: absolute;
+    top: -7px;
+    left: 0
+  }
 
   .container {
-    display: flex;
+    position: relative;
+    display: grid;
   }
 
   &__logo {

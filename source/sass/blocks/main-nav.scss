@@ -1,23 +1,23 @@
 .main-nav {
   &__list {
+    margin: 0 auto;
+    padding: 0 0 0 14px;
     display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 541px;
 
     list-style: none;
   }
 
-  &__item {
-    margin-right: 20px;
-  }
-
   &__link {
-    color: $color-default-white;
+    display: block;
+    line-height: 19px;
+    padding: 7px 15px;
+    color: $color-text;
 
     &.is-active {
-      opacity: 0.6;
+      color: rgba(72, 109, 216, 0.6);
     }
   }
 
