@@ -1,24 +1,20 @@
-.detail + .detail {
-  padding-left: 47px;
-  border-left: 1px solid #ececec;
+.detail {
 
-  &:last-child {
-    padding-right: 0;
-
-    .detail__heading {
-      padding-right: 0
-    }
+  &:not(:last-child) {
+    padding-right: 26px;
+    margin-right: 47px;
+    border-right: 1px solid #ececec;
   }
 }
 
 .detail__heading {
-  padding: 6px 48px 6px 0;
+  padding: 6px 0 6px 0;
   color: #bababa;
   line-height: 19px;
 
   svg {
     position: static;
-    margin-left: 23px;
+    margin: 0 21px 0 23px;
   }
 
   &::marker {

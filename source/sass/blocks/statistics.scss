@@ -1,0 +1,89 @@
+.statistics {
+  margin-left: -3px;
+}
+
+.statistics__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.statistics__item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 17px;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  div {
+    position: relative;
+    height: 17px;
+    border-radius: 4px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  &.statistics__item--skill-box div {
+    width: 186px;
+    background-color: #dfe1ff;
+
+    &::after {
+      width: 107px;
+      height: 100%;
+      background-color: #323be1;
+    }
+  }
+
+  &.statistics__item--skill-factory div {
+    width: 273px;
+    background-color: #82d97c4f;
+
+    &::after {
+      width: 192px;
+      height: 100%;
+      background-color: #5caf56;
+    }
+  }
+
+  &.statistics__item--geek-brains div {
+    width: 347px;
+    background-color: #e7e7e7;
+
+    &::after {
+      width: 146px;
+      height: 100%;
+      background-color: #222222;
+    }
+  }
+
+  &.statistics__item--netology div {
+    width: 276px;
+    background-color: #ffcfe0;
+
+    &::after {
+      width: 208px;
+      height: 100%;
+      background-color: #eb236b;
+    }
+  }
+
+  &.statistics__item--skypro div {
+    width: 302px;
+    background-color: #cdedff;
+
+    &::after {
+      width: 135px;
+      height: 100%;
+      background-color: #54bff9;
+    }
+  }
+}

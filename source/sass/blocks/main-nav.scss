@@ -1,14 +1,24 @@
 .main-nav {
+  &__wrapper {
+    padding-left: 118px;
+  }
+
   &__list {
-    margin: 0 auto;
-    padding: 0 0 0 14px;
+    margin: 0 auto 0 23%;
+    padding: 0;
     display: flex;
+    // grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    gap: 10px;
-    max-width: 541px;
+    flex-wrap: wrap;
+    max-width: 526px;
 
     list-style: none;
   }
+
+  // &__item {
+  //   display: flex;
+  //   justify-content: center;
+  // }
 
   &__link {
     display: block;

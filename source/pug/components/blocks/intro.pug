@@ -1,10 +1,84 @@
 mixin intro()
+
+  -
+    const stars = [
+      {
+        text: "5 звёзд",
+        counter: 5,
+      },
+      {
+        text: "4 звёзды",
+        counter: 5,
+      },
+      {
+        text: "3 звёзды",
+        counter: 5,
+      },
+      {
+        text: "2 звёзды",
+        counter: 5,
+      },
+      {
+        text: "1 звёзда",
+        counter: 5,
+      },
+    ]
+
+  - const currentStars = stars[0];
+
   .intro
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
 
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+    section.page-main__section.about
+      .container
+        .about__container
+          .about__content
+            h1
+              | FindEdu - все для <br>
+              | выбора новой профессии
+              | в одном месте
+            p
+              | Изучение тем на вебинарах с преподавателями, личные
+              | консультации с наставником. После прохождения курса
+              | с наставником. После прохождения курса
+            +btn({text: "Сравнить курсы", href: "#", isExternal: true})
+              +icon("icon-compare", 45, 45)
+          article.about__suggestion.suggestion
+            +img("content", "bg-suggestion", "png", 646, 578)
+            .suggestion__content
+              .suggestion__title
+                h2
+                  | UX/UI designer
+                p(area-label=currentStars.text)
+                  +icon("icon-star", 12, 12)
+                  +icon("icon-star", 12, 12)
+                  +icon("icon-star", 12, 12)
+                  +icon("icon-star", 12, 12)
+                  +icon("icon-star", 12, 12)
+              .suggestion__info
+                span.suggestion__price
+                  | 120 000 рублей
+                span.suggestion__counter
+                  | 1 561 компания
+              p.suggestion__text
+                | UX/UI-дизайнер — одна из самых
+                | востребованных профессий 2020 года
+              .suggestion__statistics.statistics
+                ul.statistics__list
+                  li.statistics__item.statistics__item--skill-box
+                    +icon("icon-statistics-1", 24, 24)
+                    div
+                  li.statistics__item.statistics__item--skill-factory
+                    +icon("icon-statistics-2", 24, 24)
+                    div
+                  li.statistics__item.statistics__item--geek-brains
+                    +icon("icon-statistics-3", 24, 24)
+                    div
+                  li.statistics__item.statistics__item--netology
+                    +icon("icon-statistics-4", 24, 24)
+                    div
+                  li.statistics__item.statistics__item--skypro
+                    +icon("icon-statistics-5", 24, 24)
+                    div
