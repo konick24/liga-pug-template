@@ -1,0 +1,28 @@
+.direction__container {
+  padding: 51px 0 149px;
+}
+
+.direction__heading {
+  margin: 0;
+  margin-bottom: 58px;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.direction__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 20px;
+}
+
+.direction__link {
+  padding: 0;
+  display: block;
+  color: #6b6b6b;
+  background-color: #f9f9f9;
+  border-radius: 56px;
+}

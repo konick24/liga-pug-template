@@ -1,31 +1,4 @@
 mixin intro()
-
-  -
-    const stars = [
-      {
-        text: "5 звёзд",
-        counter: 5,
-      },
-      {
-        text: "4 звёзды",
-        counter: 5,
-      },
-      {
-        text: "3 звёзды",
-        counter: 5,
-      },
-      {
-        text: "2 звёзды",
-        counter: 5,
-      },
-      {
-        text: "1 звёзда",
-        counter: 5,
-      },
-    ]
-
-  - const currentStars = stars[0];
-
   .intro
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
@@ -51,7 +24,7 @@ mixin intro()
               .suggestion__title
                 h2
                   | UX/UI designer
-                p(area-label=currentStars.text)
+                p(area-label="5 звёзд")
                   +icon("icon-star", 12, 12)
                   +icon("icon-star", 12, 12)
                   +icon("icon-star", 12, 12)
@@ -65,20 +38,217 @@ mixin intro()
               p.suggestion__text
                 | UX/UI-дизайнер — одна из самых
                 | востребованных профессий 2020 года
-              .suggestion__statistics.statistics
-                ul.statistics__list
-                  li.statistics__item.statistics__item--skill-box
-                    +icon("icon-statistics-1", 24, 24)
-                    div
-                  li.statistics__item.statistics__item--skill-factory
-                    +icon("icon-statistics-2", 24, 24)
-                    div
-                  li.statistics__item.statistics__item--geek-brains
-                    +icon("icon-statistics-3", 24, 24)
-                    div
-                  li.statistics__item.statistics__item--netology
-                    +icon("icon-statistics-4", 24, 24)
-                    div
-                  li.statistics__item.statistics__item--skypro
-                    +icon("icon-statistics-5", 24, 24)
-                    div
+              .suggestion__statistics
+                +img("content", "statistics", "png", 388, 152)
+    section.page-main__section.direction
+      .container
+        .direction__container
+          .direction__title
+            h2.direction__heading
+              | Выбери направление
+          ul.direction__list
+            li.direction__item
+              +btn({href: "#"}).direction__link
+                .direction-item
+                  .direction-item__title
+                    .direction-item__icon
+                      +icon("icon-design", 70, 68)
+                    h3.direction-item__heading
+                      | Дизайн
+                  ul.direction-item__list
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Web-дизайн
+                      span.direction-item__text
+                        | Дизайн интерьеров
+                    li.direction-item__item
+                      span.direction-item__text
+                        | 3D-моделирование
+                      span.direction-item__text
+                        | Motion-дизайн
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Графический дизайн
+                      span.direction-item__text
+                        | 3D-анимация
+                    li.direction-item__item
+                      span.direction-item__text
+                        | UX/UI дизайн
+                      span.direction-item__text
+                        | ArchiCAD
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Геймдизайн
+                      span.direction-item__text
+                        | Adobe After Effects
+            li.direction__item
+              +btn({href: "#"}).direction__link
+                .direction-item
+                  .direction-item__title
+                    .direction-item__icon
+                      +icon("icon-programming", 67, 68)
+                    h3.direction-item__heading
+                      | Программирование
+                  ul.direction-item__list
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Web-разработка
+                      span.direction-item__text
+                        | DevOps
+                    li.direction-item__item
+                      span.direction-item__text
+                        | JavaScript-разработка
+                      span.direction-item__text
+                        | ReactJS
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Мобильная разработка
+                      span.direction-item__text
+                        | GIT
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Системное администрирование
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Верстка на HTML/CSS
+                      span.direction-item__text
+                        | Unity
+            li.direction__item
+              +btn({href: "#"}).direction__link
+                .direction-item
+                  .direction-item__title
+                    .direction-item__icon
+                      +icon("icon-managment", 64, 68)
+                    h3.direction-item__heading
+                      | Менеджмент
+                  ul.direction-item__list
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Product-менеджмент
+                      span.direction-item__text
+                        | Личностный рост
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Управление разработкой и IT
+                      span.direction-item__text
+                        | AGile
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Бренд-менеджмент
+                      span.direction-item__text
+                        | Запуск стартапов
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Финансовая аналитика
+                      span.direction-item__text
+                        | Бухгалтерия
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Управление в SMM
+                      span.direction-item__text
+                        | IT-рекрутмент
+            li.direction__item
+              +btn({href: "#"}).direction__link
+                .direction-item
+                  .direction-item__title
+                    .direction-item__icon
+                      +icon("icon-analytics", 71, 68)
+                    h3.direction-item__heading
+                      | Аналитика
+                  ul.direction-item__list
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Data Science
+                      span.direction-item__text
+                        | Продуктовая аналитика
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Web-аналитика
+                      span.direction-item__text
+                        | Системная аналитика
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Бизнес-аналитика
+                      span.direction-item__text
+                        | Аналитика на R
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Работа с Excel и Google таблицами
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Машинное обучение
+                      span.direction-item__text
+                        | Нейронные сети
+            li.direction__item
+              +btn({href: "#"}).direction__link
+                .direction-item
+                  .direction-item__title
+                    .direction-item__icon
+                      +icon("icon-marketing", 80, 68)
+                    h3.direction-item__heading
+                      | Маркетинг
+                  ul.direction-item__list
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Web-аналитика
+                      span.direction-item__text
+                        | SMM-продвижение
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Интернет-маркетинг
+                      span.direction-item__text
+                        | PR-менеджмент
+                    li.direction-item__item
+                      span.direction-item__text
+                        | SEO-продвижение
+                      span.direction-item__text
+                        | Копирайтинг
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Контент-маркетинг
+                      span.direction-item__text
+                        | SERM и репутация
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Маркетинговая аналитика
+                      span.direction-item__text
+                        | Google Ads
+            li.direction__item
+              +btn({href: "#"}).direction__link
+                .direction-item
+                  .direction-item__title
+                    .direction-item__icon
+                      +icon("icon-finance", 63, 68)
+                    h3.direction-item__heading
+                      | Финансы
+                  ul.direction-item__list
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Web-аналитика
+                      span.direction-item__text
+                        | SMM-продвижение
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Интернет-маркетинг
+                      span.direction-item__text
+                        | PR-менеджмент
+                    li.direction-item__item
+                      span.direction-item__text
+                        | SEO-продвижение
+                      span.direction-item__text
+                        | Копирайтинг
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Контент-маркетинг
+                      span.direction-item__text
+                        | SERM и репутация
+                    li.direction-item__item
+                      span.direction-item__text
+                        | Маркетинговая аналитика
+                      span.direction-item__text
+                        | Google Ads
+
+
+
+
+
