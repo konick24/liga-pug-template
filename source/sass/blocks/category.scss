@@ -1,11 +1,11 @@
 .category__container {
-  padding-top: 10px;
+  padding-top: size(10px);
 }
 
 h2.category__heading {
-  margin-bottom: 52px;
-  font-size: 20px;
-  line-height: 24px;
+  margin-bottom: size(52px);
+  font-size: size(20px);
+  line-height: size(24px);
   font-weight: 500;
   color: #fafafa;
 }
@@ -13,8 +13,8 @@ h2.category__heading {
 .category__text {
   display: flex;
   flex-direction: column;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: size(20px);
+  line-height: size(32px);
   font-weight: 500;
 }
 
@@ -29,7 +29,7 @@ h2.category__heading {
 
 .category__item {
   a {
-    padding: 5px 10px;
+    padding: size(5px) size(10px);
     padding-left: 0;
     color: #6b6b6b;
     background-color: transparent;

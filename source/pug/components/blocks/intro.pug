@@ -2,8 +2,7 @@ mixin intro()
   .intro
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
-
-    section.page-main__section.about
+    section.intro__section.about
       .container
         .about__container
           .about__content
@@ -39,7 +38,8 @@ mixin intro()
                 | востребованных профессий 2020 года
               .suggestion__statistics
                 +img("content", "statistics", "png", 388, 152)
-    section.page-main__section.direction
+    section.intro__section.direction
+      +img("content", "bg-direction", "png", 3023, 1426)
       .container
         .direction__container
           .direction__title
@@ -51,7 +51,7 @@ mixin intro()
                 .direction-item
                   .direction-item__title
                     .direction-item__icon
-                      +icon("icon-design", 70, 68)
+                      +icon("icon-design", 80, 63)
                     h3.direction-item__heading
                       | Дизайн
                   ul.direction-item__list
@@ -85,7 +85,7 @@ mixin intro()
                 .direction-item
                   .direction-item__title
                     .direction-item__icon
-                      +icon("icon-programming", 67, 68)
+                      +icon("icon-programming", 80, 63)
                     h3.direction-item__heading
                       | Программирование
                   ul.direction-item__list
@@ -117,7 +117,7 @@ mixin intro()
                 .direction-item
                   .direction-item__title
                     .direction-item__icon
-                      +icon("icon-managment", 64, 68)
+                      +icon("icon-managment", 80, 63)
                     h3.direction-item__heading
                       | Менеджмент
                   ul.direction-item__list
@@ -151,7 +151,7 @@ mixin intro()
                 .direction-item
                   .direction-item__title
                     .direction-item__icon
-                      +icon("icon-analytics", 71, 68)
+                      +icon("icon-analytics", 80, 63)
                     h3.direction-item__heading
                       | Аналитика
                   ul.direction-item__list
@@ -183,7 +183,7 @@ mixin intro()
                 .direction-item
                   .direction-item__title
                     .direction-item__icon
-                      +icon("icon-marketing", 80, 68)
+                      +icon("icon-marketing", 80, 63)
                     h3.direction-item__heading
                       | Маркетинг
                   ul.direction-item__list
@@ -217,7 +217,7 @@ mixin intro()
                 .direction-item
                   .direction-item__title
                     .direction-item__icon
-                      +icon("icon-finance", 63, 68)
+                      +icon("icon-finance", 80, 63)
                     h3.direction-item__heading
                       | Финансы
                   ul.direction-item__list
@@ -246,7 +246,7 @@ mixin intro()
                         | Маркетинговая аналитика
                       span.direction-item__text
                         | Google Ads
-    section.page-main__promo.promo
+    section.intro__promo.promo
       h2(area-label="О нас")
       .container
         .promo__container
@@ -256,7 +256,7 @@ mixin intro()
               | для новичков и практикующих специалистов.
             .bunner__wrapper
               .bunner__content
-                +img("content", "user", "png", 425, 425)
+                +img("content", "user", "png", 425, 383)
                 .bunner__preview.preview
                   p.preview__heading
                     | 300+ довольных пользователей

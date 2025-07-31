@@ -8,10 +8,10 @@
 }
 
 .footer__container {
-  padding: 80px 0;
-  min-height: 742px;
+  padding: size(80px) 0;
+  min-height: size(742px);
   display: grid;
-  grid-template-columns: repeat(4, minmax(270px, 1fr));
+  grid-template-columns: repeat(4, minmax(size(270px), 1fr));
   justify-content: space-between;
   color: #6b6b6b;
 

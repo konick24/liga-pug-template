@@ -1,11 +1,11 @@
 .direction-item {
-  padding: 50px 25px 93px;
+  padding: size(51px) size(25px) size(93px);
   display: flex;
   flex-direction: column;
 }
 
 .direction-item__title {
-  margin-bottom: 68px;
+  margin-bottom: size(73px);
   display: flex;
   align-items: center;
 
@@ -14,11 +14,18 @@
   }
 }
 
+.direction-item__icon {
+  svg {
+    width: size(80px);
+    height: size(63px);
+  }
+}
+
 .direction-item__heading {
   margin: 0;
-  padding-left: 25px;
-  font-size: 25px;
-  line-height: 30px;
+  padding-left: size(15px);
+  font-size: size(25px);
+  line-height: size(30px);
   font-weight: 500;
 }
 
@@ -28,7 +35,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  row-gap: 3px;
+  row-gap: size(3px);
 }
 
 .direction-item__item {
@@ -38,11 +45,11 @@
 
 .direction-item__text {
   margin: 0;
-  font-size: 17px;
-  line-height: 27px;
+  font-size: size(17px);
+  line-height: size(27px);
 
   & + &::before {
     content: "\2726";
-    margin: 0 10px;
+    margin: 0 size(10px);
   }
 }

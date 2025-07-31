@@ -1,11 +1,11 @@
 .popular-destinations__container {
-  padding-top: 10px;
+  padding-top: size(10px);
 }
 
 h2.popular-destinations__heading {
-  margin-bottom: 52px;
-  font-size: 20px;
-  line-height: 24px;
+  margin-bottom: size(52px);
+  font-size: size(20px);
+  line-height: size(24px);
   font-weight: 500;
   color: #fafafa;
 }
@@ -13,8 +13,8 @@ h2.popular-destinations__heading {
 .popular-destinations__text {
   display: flex;
   flex-direction: column;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: size(20px);
+  line-height: size(32px);
   font-weight: 500;
 }
 
@@ -24,12 +24,12 @@ h2.popular-destinations__heading {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: size(16px);
 }
 
 .popular-destinations__item {
   a {
-    padding: 5px 10px;
+    padding: size(5px) size(10px);
     padding-left: 0;
     color: #6b6b6b;
     background-color: transparent;

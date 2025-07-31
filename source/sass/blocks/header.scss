@@ -1,16 +1,16 @@
 .header {
-  padding: 45px 0;
+  padding: size(45px) 0;
 
   background-color: $color-default-white;
 
   &__container + &__container {
     position: relative;
-    margin-top: 38px;
-    padding-top: 46px;
+    margin-top: size(38px);
+    padding-top: size(46px);
     &::before {
       content: "";
       position: absolute;
-      height: 0.7px;
+      height: size(0.7px);
       top: 0;
       left: 0;
       right: 0;
@@ -21,7 +21,9 @@
 
   svg {
     position: absolute;
-    top: -7px;
+    width: size(118px);
+    height: size(39px);
+    top: size(-7px);
     left: 0;
     color: #1d5cbb;
   }

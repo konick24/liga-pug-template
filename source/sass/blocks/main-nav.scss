@@ -1,29 +1,23 @@
 .main-nav {
   &__wrapper {
-    padding-left: 118px;
+    padding-left: size(118px);
   }
 
   &__list {
     margin: 0 auto 0 23%;
     padding: 0;
     display: flex;
-    // grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 526px;
+    max-width: size(526px);
 
     list-style: none;
   }
 
-  // &__item {
-  //   display: flex;
-  //   justify-content: center;
-  // }
-
   &__link {
     display: block;
-    line-height: 19px;
-    padding: 7px 15px;
+    line-height: size(19px);
+    padding: size(7px) size(15px);
     color: $color-text;
 
     &.is-active {

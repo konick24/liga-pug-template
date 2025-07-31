@@ -1,19 +1,19 @@
 .preview {
-  padding-left: 23px;
-  max-width: 362px;
+  padding-left: size(23px);
+  max-width: size(362px);
 }
 
 .preview__heading {
   margin: 0;
-  margin-bottom: 18px;
-  font-size: 30px;
-  line-height: 36px;
+  margin-bottom: size(18px);
+  font-size: size(30px);
+  line-height: size(36px);
   font-weight: 600;
   color: #486dd8;
 }
 
 .preview__text {
   margin: 0;
-  line-height: 26px;
+  line-height: size(26px);
   color: #252830;
 }

@@ -1,11 +1,16 @@
 .copyright__title {
-  margin-bottom: 47px;
+  margin-bottom: size(47px);
+
+  svg {
+    width: size(125px);
+    height: size(41px);
+  }
 }
 
 .copyright__text {
   display: flex;
   flex-direction: column;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: size(20px);
+  line-height: size(32px);
   font-weight: 500;
 }
