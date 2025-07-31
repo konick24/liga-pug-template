@@ -1,3 +1,57 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      .footer__container
+        .copyright
+          .copyright__container
+            h2(area-label="Авторское право")
+            .copyright__title
+              +icon("logo", 125, 41)
+            .copyright__text
+              span
+                | © FindEdu 2022.
+              span
+                | Все права защищены.
+        .category
+          .category__container
+            h2.category__heading
+              | Категории
+            ul.category__list
+              li.category__item
+                +btn({text: "Дизайн", href: "#"})
+              li.category__item
+                +btn({text: "Программирование", href: "#"})
+              li.category__item
+                +btn({text: "Маркетинг", href: "#"})
+              li.category__item
+                +btn({text: "Менеджмент", href: "#"})
+              li.category__item
+                +btn({text: "Аналитика", href: "#"})
+        .popular-destinations
+          .popular-destinations__container
+            h2.popular-destinations__heading
+              | Популярные направления
+            ul.popular-destinations__list
+              li.popular-destinations__item
+                +btn({text: "Веб-разработка", href: "#"})
+              li.popular-destinations__item
+                +btn({text: "Java-разработка", href: "#"})
+              li.popular-destinations__item
+                +btn({text: "Python-разработка", href: "#"})
+              li.popular-destinations__item
+                +btn({text: "SMM-продвижение", href: "#"})
+              li.popular-destinations__item
+                +btn({text: "Графический дизайн", href: "#"})
+              li.popular-destinations__item
+                +btn({text: "Дизайн интерьеров", href: "#"})
+        .info
+          .info__container
+            h2.info__heading
+              | Общая информация
+            ul.info__list
+              li.info__item
+                +btn({text: "О проекте", href: "#"})
+              li.info__item
+                +btn({text: "Политика конфиденциальности", href: "#"})
+              li.info__item
+                +btn({text: "Пользовательское соглашение", href: "#"})

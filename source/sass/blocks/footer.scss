@@ -1,5 +1,21 @@
 .footer {
-  padding: 40px 0;
+  background-color: #222222;
 
-  background-color: $color-neon-blue;
+  svg {
+    display: block;
+    color: $color-default-white;
+  }
+}
+
+.footer__container {
+  padding: 80px 0;
+  min-height: 742px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(270px, 1fr));
+  justify-content: space-between;
+  color: #6b6b6b;
+
+  h2 {
+    margin: 0;
+  }
 }
