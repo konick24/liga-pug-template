@@ -5,6 +5,7 @@
 
   @include vp-1919 {
     max-width: 1280px;
+    width: auto;
   }
 
   @include vp-1439 {
@@ -12,7 +13,7 @@
   }
 
   @include vp-1023 {
-    padding: 0 24px;
+    margin: 0 80px;
   }
 
   @include vp-767 {

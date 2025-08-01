@@ -1,26 +1,95 @@
 .detail {
+  position: relative;
 
-  &:not(:last-child) {
-    padding-right: size(26px);
-    margin-right: size(47px);
-    border-right: size(1px) solid #ececec;
+  // максимум до 1024px
+  @include vp-1024 {
+    & + & {
+      padding-left: size(46px);
+      margin-left: size(28px);
+      border-left: size(1px) solid #ececec;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 23px 20px;
+    margin: 0;
+    min-width: 320px;
+    border: none;
+    border-bottom: size(1px) solid #ececec;
   }
 }
 
-.detail__heading {
-  padding: size(6px) 0;
-  color: #bababa;
-  line-height: size(19px);
+.detail__title {
+  padding: size(6px) size(20px) size(6px) 0;
 
   svg {
     position: static;
-    margin: 0 size(21px) 0 size(23px);
+    margin: 0 0 0 size(23px);
     width: size(10px);
     height: size(10px);
+    color: #bababa;
+
+    @include vp-1023 {
+      .detail[open] & {
+        color: $color-accent-main;
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &::marker {
     display: none;
     content: "";
   }
+
+  @include vp-1023 {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.detail__heading {
+  color: #bababa;
+  line-height: size(19px);
+
+  @include vp-1023 {
+    .detail[open] & {
+      color: $color-accent-main;
+    }
+  }
+}
+
+.detail__list {
+  margin: 0;
+  padding: 15px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: size(12px);
+  line-height: size(15px);
+  background-color: $color-default-white;
+
+  .detail[open] & {
+    min-width: max-content;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+
+    @include vp-1023 {
+      position: static;
+      margin-top: 25px;
+      padding: 15px 0 14px;
+      background-color: #f8f7fc;
+    }
+  }
+}
+
+a.detail__link {
+  display: block;
+  padding: 5px 10px;
+  color: #454545;
+  background-color: transparent;
 }

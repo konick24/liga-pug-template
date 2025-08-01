@@ -16,7 +16,6 @@
       right: 0;
       background-color: #eaeaea;
     }
-
   }
 
   svg {
@@ -26,14 +25,52 @@
     top: size(-7px);
     left: 0;
     color: #1d5cbb;
+
+    @include vp-1023 {
+      position: static;
+      width: 118px;
+      height: 39px;
+    }
   }
 
   .container {
     position: relative;
-    display: grid;
+
+    @include vp-1023 {
+      position: static;
+      width: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__logo {
     color: $color-default-white;
+  }
+
+  @include vp-1023 {
+    position: relative;
+    padding: 30px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: size(0.7px);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #eaeaea;
+    }
+
+    &__container + &__container {
+      position: static;
+      margin-top: 0;
+      padding-top: 0;
+
+      &::before {
+        content: none;
+      }
+    }
   }
 }

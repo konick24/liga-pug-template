@@ -18,4 +18,9 @@
   h2 {
     margin: 0;
   }
+
+  @include vp-1023 {
+    grid-template-columns: 220px 200px;
+    justify-content: space-between;
+  }
 }

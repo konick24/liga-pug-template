@@ -6,6 +6,10 @@
 
 .promo__container {
   padding: size(149px) 0 size(123px);
+
+  @include vp-1023 {
+    padding: 75px 0 62px;
+  }
 }
 
 .promo__heading {

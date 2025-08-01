@@ -29,6 +29,11 @@ html {
   @include vp-1919 {
     font-size: $fz-default;
   }
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 body {

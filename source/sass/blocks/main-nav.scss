@@ -1,17 +1,37 @@
 .main-nav {
   &__wrapper {
     padding-left: size(118px);
+
+    // @include vp-1023 {
+    //   padding-left: 0;
+    //   display: none;
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: -30px;
+
+    //   &--open {
+    //     display: block;
+    //   }
+    // }
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   &__list {
     margin: 0 auto 0 23%;
     padding: 0;
+    list-style: none;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: size(526px);
 
-    list-style: none;
+    // @include vp-1023 {
+    //   margin: 0 auto;
+    // }
   }
 
   &__link {
@@ -27,5 +47,18 @@
 
   &__toggle {
     display: none;
+
+      @include vp-1023 {
+      display: block;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }

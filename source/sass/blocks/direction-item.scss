@@ -2,6 +2,10 @@
   padding: size(51px) size(25px) size(93px);
   display: flex;
   flex-direction: column;
+
+  // @include vp-1023 {
+  //   padding: 51px 25px 93px;
+  // }
 }
 
 .direction-item__title {

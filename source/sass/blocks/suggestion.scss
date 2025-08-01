@@ -13,6 +13,10 @@
     max-width: none;
     z-index: -1;
   }
+
+  @include vp-1439 {
+    display: none;
+  }
 }
 
 .suggestion__content {

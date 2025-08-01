@@ -18,6 +18,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
+
+  // пользовательские скрипты
+
+  const buttonMenu = document.querySelector('.main-nav__toggle');
+  const menu = document.querySelector('.secondary-nav');
+
+  buttonMenu.addEventListener('click', () => {
+    console.log('лох');
+    menu.classList.toggle('secondary-nav--open');
+  });
+
   window.addEventListener('load', () => {
     initModals();
     uploadFile();
