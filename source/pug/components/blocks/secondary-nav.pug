@@ -1,0 +1,76 @@
+mixin secondaryNav()
+  -
+    const sacondaryNavList = [
+      {
+        href: "#",
+        text: "Дизайн",
+        detailList: [
+          {
+            href: "#",
+            text: "3D анимация",
+          },
+          {
+              href: "#",
+              text: "3D MAX"
+          },
+          {
+              href: "#",
+              text: "3D-моделирование"
+          },
+          {
+              href: "#",
+              text: "Adobe After Effects"
+          },
+          {
+              href: "#",
+              text: "Adobe Illustrator"
+          },
+          {
+              href: "#",
+              text: "Adobe Photoshop"
+          },
+          {
+              href: "#",
+              text: "Отрисовка иллюстраций"
+          },
+        ]
+      },
+      {
+        href: "#",
+        text: "Праграммирование",
+        detailList: [],
+      },
+      {
+        href: "#",
+        text: "Аналитика",
+        detailList: [],
+      },
+      {
+        href: "#",
+        text: "Менеджмент",
+        detailList: [],
+      },
+      {
+        href: "#",
+        text: "Маркетинг",
+        detailList: [],
+      },
+      {
+        href: "#",
+        text: "Финансы",
+        detailList: [],
+      },
+    ]
+
+  nav.secondary-nav
+    .secondary-nav__list
+      each list in sacondaryNavList
+        details.secondary-nav__item.detail
+          summary.detail__title
+            span.detail__heading #{list.text}
+            +icon("arrow", 10, 10)
+          if list.subList
+            ul.detail__list
+              each detail in list.detailList
+                li.ditail__item
+                  +btn({text: detail.text, href: detail.href}).detail__link
