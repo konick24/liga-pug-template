@@ -3,7 +3,6 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -23,11 +22,61 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const buttonMenu = document.querySelector('.main-nav__toggle');
   const menu = document.querySelector('.secondary-nav');
+  let swiperInstance;
 
   buttonMenu.addEventListener('click', () => {
-    console.log('лох');
     menu.classList.toggle('secondary-nav--open');
   });
+
+  const initSwiper = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 1024 && !swiperInstance) {
+      const swiperDirection = new Swiper('.swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          1920: {
+            slidesPerView: 'auto',
+          },
+        },
+      });
+
+      const swiperBunners = new Swiper('.bunner-content', {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          1920: {
+            slidesPerView: 'auto',
+          },
+        },
+      });
+    } else if (screenWidth >= 1024 && swiperInstance) {
+      swiperInstance.distroy(true, true);
+      swiperInstance = null;
+    }
+  };
+
+  window.addEventListener('load', initSwiper);
+  window.addEventListener('resize', initSwiper);
+
 
   window.addEventListener('load', () => {
     initModals();

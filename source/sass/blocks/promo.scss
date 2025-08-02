@@ -2,16 +2,19 @@
   h2 {
     margin: 0;
   }
+
+  @include vp-1023 {
+    .container {
+      margin: 0;
+    }
+  }
 }
 
 .promo__container {
   padding: size(149px) 0 size(123px);
 
   @include vp-1023 {
-    padding: 75px 0 62px;
+    padding: 49px 0 62px;
   }
 }
 
-.promo__heading {
-  margin: 0;
-}

@@ -15,6 +15,12 @@
   line-height: size(36px);
   font-weight: 600;
   color: #486dd8;
+
+  @include vp-1023 {
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .preview__text {

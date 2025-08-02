@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
 
-  // @include vp-1023 {
-  //   padding: 51px 25px 93px;
-  // }
+  @include vp-1023 {
+    padding: 40px 22px 49px;
+  }
 }
 
 .direction-item__title {
@@ -16,12 +16,21 @@
   svg {
     display: block;
   }
+
+  @include vp-1023 {
+    margin-bottom: 44px;
+  }
 }
 
 .direction-item__icon {
   svg {
     width: size(80px);
     height: size(63px);
+
+    @include vp-1023 {
+      width: 56px;
+      height: 43px;
+    }
   }
 }
 
@@ -31,6 +40,12 @@
   font-size: size(25px);
   line-height: size(30px);
   font-weight: 500;
+
+  @include vp-1023 {
+    padding-left: 10px;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .direction-item__list {
@@ -40,20 +55,36 @@
   display: flex;
   flex-direction: column;
   row-gap: size(3px);
+  overflow-x: hidden;
 }
 
 .direction-item__item {
   display: flex;
   flex-wrap: wrap;
+
+  @include vp-1023 {
+    flex-wrap: nowrap;
+  }
 }
 
 .direction-item__text {
   margin: 0;
+
   font-size: size(17px);
   line-height: size(27px);
 
   & + &::before {
     content: "\2726";
     margin: 0 size(10px);
+  }
+
+  @include vp-1023 {
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 22px;
+
+    & + &::before {
+      margin: 0 7px;
+    }
   }
 }

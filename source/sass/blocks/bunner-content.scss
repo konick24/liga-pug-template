@@ -1,0 +1,55 @@
+.bunner-content__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    margin: 0 80px 25px;
+    width: 280px;
+    align-items: stretch;
+  }
+}
+
+.bunner-content__item {
+  img {
+    margin-bottom: size(70px);
+    width: size(425px);
+    height: size(425px);
+  }
+
+  @include vp-1023 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-default-white;
+    border-radius: 34px;
+
+    img {
+      margin-bottom: 0;
+      width: 280px;
+      height: 280px;
+    }
+  }
+}
+
+.bunner-content__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+.bunner-content__button {
+  position: static;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #f8f7fc;
+  border: 1px solid #efefef;
+  border-radius: 50%;
+
+  &::after {
+    font-size: 12px;
+    color: #2b2b2b;
+  }
+}
