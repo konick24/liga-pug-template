@@ -37,6 +37,11 @@
   display: flex;
   justify-content: center;
   gap: 10%;
+
+  // максимум до 1024px
+  @include vp-1024 {
+    display: none;
+  }
 }
 
 .bunner-content__button {

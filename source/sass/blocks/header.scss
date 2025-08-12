@@ -1,12 +1,12 @@
 .header {
-  padding: size(45px) 0;
+  padding: size(45px) 0 size(43px);
 
   background-color: $color-default-white;
 
   &__container + &__container {
     position: relative;
     margin-top: size(38px);
-    padding-top: size(46px);
+    padding-top: size(42px);
     &::before {
       content: "";
       position: absolute;
@@ -19,17 +19,13 @@
   }
 
   svg {
-    position: absolute;
-    width: size(118px);
+    width: size(33px);
     height: size(39px);
-    top: size(-7px);
-    left: 0;
     color: #1d5cbb;
 
     @include vp-1023 {
-      position: static;
-      width: 118px;
-      height: 39px;
+      width: 23px;
+      height: 26px;
     }
   }
 
@@ -72,5 +68,31 @@
         content: none;
       }
     }
+  }
+}
+
+.header__title {
+  position: absolute;
+  top: size(-7px);
+  left: 0;
+
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    position: static;
+  }
+}
+
+.header__text {
+  margin-left: size(10px);
+  padding-top: (4px);
+  font-size: size(19px);
+  line-height: size(23px);
+  font-weight: 500;
+  color: #1d5cbb;
+
+  @include vp-767 {
+    display: none;
   }
 }

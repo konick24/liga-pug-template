@@ -19,7 +19,10 @@ mixin header(headerMods, currentUrl)
     .header__container
       .container
         if(currentUrl === "index.html")
-          +icon("logo", 118, 39)
+          .header__title
+            +icon("logo", 33, 39)
+            span.header__text
+              | FindEdu
         else
           a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
         nav.main-nav
@@ -36,4 +39,4 @@ mixin header(headerMods, currentUrl)
                     a.main-nav__link(href=link.href)= link.text
     .header__container
       .container
-        +directing()
+        +secondaryNav()

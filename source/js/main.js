@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const initSwiper = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth < 1024 && !swiperInstance) {
-      const swiperDirection = new Swiper('.swiper', {
+      swiperInstance = new Swiper('.swiper', {
         slidesPerView: 'auto',
         spaceBetween: 12,
         loop: true,
@@ -50,27 +50,30 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
 
-      const swiperBunners = new Swiper('.bunner-content', {
-        slidesPerView: 'auto',
-        spaceBetween: 12,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          1920: {
-            slidesPerView: 'auto',
-          },
-        },
-      });
+      // const swiperBunners = new Swiper('.bunner-content', {
+      //   slidesPerView: 'auto',
+      //   spaceBetween: 12,
+      //   loop: true,
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //     clickable: true,
+      //   },
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+      //   breakpoints: {
+      //     1920: {
+      //       slidesPerView: 'auto',
+      //     },
+      //   },
+      // });
     } else if (screenWidth >= 1024 && swiperInstance) {
-      swiperInstance.distroy(true, true);
-      swiperInstance = null;
+      swiperInstance.forEach((swiper) => {
+        swiper.destroy(true, true);
+      });
+      // swiperInstance.destroy(true, true);
+      swiperInstance = undefined;
     }
   };
 
