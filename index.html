@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>ProjectName</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="FindEdu - все для выбора новой профессии в одном месте">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-400.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-500.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-600.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-700.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-800.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/inter-v11-latin_cyrillic-800.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="container">
+            <div class="header__title">
+              <svg width="33" height="39" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg><span class="header__text">FindEdu</span>
+            </div><span class="header__menu-mobile">Курсы</span>
+            <nav class="main-nav">
+              <div class="main-nav__wrapper">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item"><span class="is-active">Главная</span>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="btn" href="#">Курсы
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="btn" href="#">Блог
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button class="main-nav__toggle main-nav__toggle--burger btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-burger"></use>
+                </svg>
+              </button>
+              <button class="main-nav__toggle main-nav__toggle--cross btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </button>
+            </nav>
+          </div>
+        </div>
+        <div class="header__container">
+          <div class="container">
+            <nav class="secondary-nav">
+              <div class="secondary-nav__list">
+                <div class="secondary-nav__item detail">
+                  <button class="btn detail__button" type="button"><span class="detail__heading">Дизайн</span>
+                    <svg width="10" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                  <ul class="detail__list">
+                    <li class="ditail__item">
+                      <a class="btn detail__link" href="#">3D анимация
+                      </a>
+                    </li>
+                    <li class="ditail__item">
+                      <a class="btn detail__link" href="#">3D MAX
+                      </a>
+                    </li>
+                    <li class="ditail__item">
+                      <a class="btn detail__link" href="#">3D-моделирование
+                      </a>
+                    </li>
+                    <li class="ditail__item">
+                      <a class="btn detail__link" href="#">Adobe After Effects
+                      </a>
+                    </li>
+                    <li class="ditail__item">
+                      <a class="btn detail__link" href="#">Adobe Illustrator
+                      </a>
+                    </li>
+                    <li class="ditail__item">
+                      <a class="btn detail__link" href="#">Adobe Photoshop
+                      </a>
+                    </li>
+                    <li class="ditail__item">
+                      <a class="btn detail__link" href="#">Отрисовка иллюстраций
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="secondary-nav__item detail">
+                  <button class="btn detail__button" type="button"><span class="detail__heading">Праграммирование</span>
+                    <svg width="10" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="secondary-nav__item detail">
+                  <button class="btn detail__button" type="button"><span class="detail__heading">Аналитика</span>
+                    <svg width="10" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="secondary-nav__item detail">
+                  <button class="btn detail__button" type="button"><span class="detail__heading">Менеджмент</span>
+                    <svg width="10" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="secondary-nav__item detail">
+                  <button class="btn detail__button" type="button"><span class="detail__heading">Маркетинг</span>
+                    <svg width="10" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="secondary-nav__item detail">
+                  <button class="btn detail__button" type="button"><span class="detail__heading">Финансы</span>
+                    <svg width="10" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="intro">
+          <section class="intro__section about"><img src="img/content/bg-direction-mobile.webp" srcset="img/content/bg-direction-mobile@2x.webp 2x" width="1191" height="562">
+            <div class="container">
+              <div class="about__container">
+                <div class="about__content">
+                  <h1>
+                    FindEdu - все для <br>
+                    выбора новой профессии <br>
+                    в одном месте
+                  </h1>
+                  <p>
+                    Изучение тем на вебинарах с преподавателями, личные
+                    консультации с наставником. После прохождения курса
+                    с наставником. После прохождения курса
+                  </p>
+                  <a class="btn" href="#" target="_blank" rel="nofollow noopener noreferrer">Сравнить курсы
+                    <svg width="45" height="45" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-compare"></use>
+                    </svg>
+                  </a>
+                </div>
+                <article class="about__suggestion suggestion"><img src="img/content/bg-suggestion.webp" srcset="img/content/bg-suggestion@2x.webp 2x" width="646" height="578">
+                  <div class="suggestion__content">
+                    <div class="suggestion__title">
+                      <h2>UX/UI designer</h2>
+                      <p area-label="5 звёзд">
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <div class="suggestion__info"><span class="suggestion__price">120 000 рублей</span><span class="suggestion__counter">1 561 компания</span></div>
+                    <p class="suggestion__text">
+                      UX/UI-дизайнер — одна из самых
+                      востребованных профессий 2020 года
+                    </p>
+                    <div class="suggestion__statistics"><img src="img/content/statistics.webp" srcset="img/content/statistics@2x.webp 2x" width="388" height="152">
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <section class="intro__section direction"><img src="img/content/bg-direction.webp" srcset="img/content/bg-direction@2x.webp 2x" width="3023" height="1426">
+            <div class="container">
+              <div class="direction__container">
+                <div class="direction__title">
+                  <h2 class="direction__heading">Выбери направление</h2>
+                </div>
+                <div class="direction__swiper swiper">
+                  <ul class="direction__list swiper-wrapper">
+                    <li class="direction__item swiper-slide">
+                      <a class="btn direction__link direction__link--design" href="#">
+                        <div class="direction-item">
+                          <div class="direction-item__title">
+                            <div class="direction-item__icon">
+                              <svg width="80" height="63" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#icon-design"></use>
+                              </svg>
+                            </div>
+                            <h3 class="direction-item__heading">Дизайн</h3>
+                          </div>
+                          <ul class="direction-item__list">
+                            <li class="direction-item__item"><span class="direction-item__text">Web-дизайн</span><span class="direction-item__text">Дизайн интерьеров</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">3D-моделирование</span><span class="direction-item__text">Motion-дизайн</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Графический дизайн</span><span class="direction-item__text">3D-анимация</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">UX/UI дизайн</span><span class="direction-item__text">ArchiCAD</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Геймдизайн</span><span class="direction-item__text">Adobe After Effects</span></li>
+                          </ul>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="direction__item swiper-slide">
+                      <a class="btn direction__link direction__link--programming" href="#">
+                        <div class="direction-item">
+                          <div class="direction-item__title">
+                            <div class="direction-item__icon">
+                              <svg width="80" height="63" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#icon-programming"></use>
+                              </svg>
+                            </div>
+                            <h3 class="direction-item__heading">Программирование</h3>
+                          </div>
+                          <ul class="direction-item__list">
+                            <li class="direction-item__item"><span class="direction-item__text">Web-разработка</span><span class="direction-item__text">DevOps</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">JavaScript-разработка</span><span class="direction-item__text">ReactJS</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Мобильная разработка</span><span class="direction-item__text">GIT</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Системное администрирование</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Верстка на HTML/CSS</span><span class="direction-item__text">Unity</span></li>
+                          </ul>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="direction__item swiper-slide">
+                      <a class="btn direction__link direction__link--managment" href="#">
+                        <div class="direction-item">
+                          <div class="direction-item__title">
+                            <div class="direction-item__icon">
+                              <svg width="80" height="63" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#icon-managment"></use>
+                              </svg>
+                            </div>
+                            <h3 class="direction-item__heading">Менеджмент</h3>
+                          </div>
+                          <ul class="direction-item__list">
+                            <li class="direction-item__item"><span class="direction-item__text">Product-менеджмент</span><span class="direction-item__text">Личностный рост</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Управление разработкой и IT</span><span class="direction-item__text">AGile</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Бренд-менеджмент</span><span class="direction-item__text">Запуск стартапов</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Финансовая аналитика</span><span class="direction-item__text">Бухгалтерия</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Управление в SMM</span><span class="direction-item__text">IT-рекрутмент</span></li>
+                          </ul>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="direction__item swiper-slide">
+                      <a class="btn direction__link direction__link--analytics" href="#">
+                        <div class="direction-item">
+                          <div class="direction-item__title">
+                            <div class="direction-item__icon">
+                              <svg width="80" height="63" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#icon-analytics"></use>
+                              </svg>
+                            </div>
+                            <h3 class="direction-item__heading">Аналитика</h3>
+                          </div>
+                          <ul class="direction-item__list">
+                            <li class="direction-item__item"><span class="direction-item__text">Data Science</span><span class="direction-item__text">Продуктовая аналитика</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Web-аналитика</span><span class="direction-item__text">Системная аналитика</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Бизнес-аналитика</span><span class="direction-item__text">Аналитика на R</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Работа с Excel и Google таблицами</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Машинное обучение</span><span class="direction-item__text">Нейронные сети</span></li>
+                          </ul>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="direction__item swiper-slide">
+                      <a class="btn direction__link direction__link--marketing" href="#">
+                        <div class="direction-item">
+                          <div class="direction-item__title">
+                            <div class="direction-item__icon">
+                              <svg width="80" height="63" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#icon-marketing"></use>
+                              </svg>
+                            </div>
+                            <h3 class="direction-item__heading">Маркетинг</h3>
+                          </div>
+                          <ul class="direction-item__list">
+                            <li class="direction-item__item"><span class="direction-item__text">Web-аналитика</span><span class="direction-item__text">SMM-продвижение</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Интернет-маркетинг</span><span class="direction-item__text">PR-менеджмент</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">SEO-продвижение</span><span class="direction-item__text">Копирайтинг</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Контент-маркетинг</span><span class="direction-item__text">SERM и репутация</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Маркетинговая аналитика</span><span class="direction-item__text">Google Ads</span></li>
+                          </ul>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="direction__item swiper-slide">
+                      <a class="btn direction__link direction__link--finance" href="#">
+                        <div class="direction-item">
+                          <div class="direction-item__title">
+                            <div class="direction-item__icon">
+                              <svg width="80" height="63" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#icon-finance"></use>
+                              </svg>
+                            </div>
+                            <h3 class="direction-item__heading">Финансы</h3>
+                          </div>
+                          <ul class="direction-item__list">
+                            <li class="direction-item__item"><span class="direction-item__text">Web-аналитика</span><span class="direction-item__text">SMM-продвижение</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Интернет-маркетинг</span><span class="direction-item__text">PR-менеджмент</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">SEO-продвижение</span><span class="direction-item__text">Копирайтинг</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Контент-маркетинг</span><span class="direction-item__text">SERM и репутация</span></li>
+                            <li class="direction-item__item"><span class="direction-item__text">Маркетинговая аналитика</span><span class="direction-item__text">Google Ads</span></li>
+                          </ul>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="direction__buttons">
+                    <div class="direction__button direction__button--prev swiper-button-prev"></div>
+                    <div class="direction__button direction__button--next swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="intro__promo promo">
+            <h2 area-label="О нас"></h2>
+            <div class="container">
+              <div class="promo__container">
+                <div class="promo__banner bunner">
+                  <p class="bunner__heading">
+                    Агрегируем курсы по самым актуальным темам
+                    для новичков и практикующих специалистов.
+                  </p>
+                  <div class="bunner__wrapper">
+                    <div class="bunner__content">
+                      <div class="bunner-content swiper">
+                        <ul class="bunner-content__list swiper-wrapper">
+                          <li class="bunner-content__item swiper-slide bunner-content__item--current" data-bunner-item="1"><img src="img/content/user.webp" srcset="img/content/user@2x.webp 2x" width="425" height="425">
+                            <div class="bunner__preview preview">
+                              <p class="preview__heading">300+ довольных пользователей</p>
+                              <p class="preview__text">
+                                Дополнительно в этом методе есть
+                                кнопка «Объединить по строкам». С
+                                помощью неё можно объединить ячейки
+                                выбранного диапазона построчно.
+                              </p>
+                            </div>
+                          </li>
+                          <li class="bunner-content__item swiper-slide" data-bunner-item="2"><img src="img/content/courses.webp" srcset="img/content/courses@2x.webp 2x" width="425" height="425">
+                            <div class="bunner__preview preview">
+                              <p class="preview__heading">1000+ образовательных курсов</p>
+                              <p class="preview__text">
+                                Дополнительно в этом методе есть
+                                кнопка «Объединить по строкам». С
+                                помощью неё можно объединить ячейки
+                                выбранного диапазона построчно.
+                              </p>
+                            </div>
+                          </li>
+                          <li class="bunner-content__item swiper-slide" data-bunner-item="3"><img src="img/content/mentors.webp" srcset="img/content/mentors@2x.webp 2x" width="425" height="425">
+                            <div class="bunner__preview preview">
+                              <p class="preview__heading">20+ менторов больших компаний</p>
+                              <p class="preview__text">
+                                Дополнительно в этом методе есть
+                                кнопка «Объединить по строкам». С
+                                помощью неё можно объединить ячейки
+                                выбранного диапазона построчно.
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="bunner-content__buttons">
+                          <div class="bunner-content__button bunner-content__button--prev swiper-button-prev"></div>
+                          <div class="bunner-content__button bunner-content__button--next swiper-button-next"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="bunner__list">
+                      <li class="bunner__item bunner__item--current" data-bunner-content-item="1">
+                        <button class="btn bunner__button" type="button">
+                          <div class="bunner__icon">
+                            <svg width="25" height="25" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#icon-user"></use>
+                            </svg>
+                          </div>
+                          <h3 class="bunner__item-heading">Довольные пользователи</h3>
+                          <p class="bunner__text">
+                            Изучение тем на вебинарах с преподавателями,
+                            наставником. После прохождения курса вы будете
+                          </p>
+                        </button>
+                      </li>
+                      <li class="bunner__item" data-bunner-content-item="2">
+                        <button class="btn bunner__button" type="button">
+                          <div class="bunner__icon">
+                            <svg width="25" height="25" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#icon-courses"></use>
+                            </svg>
+                          </div>
+                          <h3 class="bunner__item-heading">Образовательные курсы</h3>
+                          <p class="bunner__text">
+                            Изучение тем на вебинарах с преподавателями,
+                            наставником. После прохождения курса вы будете
+                          </p>
+                        </button>
+                      </li>
+                      <li class="bunner__item" data-bunner-content-item="3">
+                        <button class="btn bunner__button" type="button">
+                          <div class="bunner__icon">
+                            <svg width="25" height="25" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#icon-mentors"></use>
+                            </svg>
+                          </div>
+                          <h3 class="bunner__item-heading">Менторы из больших компаний</h3>
+                          <p class="bunner__text">
+                            Изучение тем на вебинарах с преподавателями,
+                            наставником. После прохождения курса вы будете
+                          </p>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="footer__content">
+              <div class="copyright">
+                <div class="copyright__container">
+                  <a class="btn copyright__title" href="#">
+                    <h2 area-label="Авторское право"></h2>
+                    <svg width="33" height="39" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#logo"></use>
+                    </svg><span class="copyright__heading">FindEdu</span>
+                  </a>
+                  <div class="copyright__text"><span>© FindEdu 2022.</span><span>Все права защищены.</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__content">
+              <div class="category">
+                <div class="category__container">
+                  <h2 class="category__heading">Категории</h2>
+                  <ul class="category__list">
+                    <li class="category__item">
+                      <a class="btn" href="#">Дизайн
+                      </a>
+                    </li>
+                    <li class="category__item">
+                      <a class="btn" href="#">Программирование
+                      </a>
+                    </li>
+                    <li class="category__item">
+                      <a class="btn" href="#">Маркетинг
+                      </a>
+                    </li>
+                    <li class="category__item">
+                      <a class="btn" href="#">Менеджмент
+                      </a>
+                    </li>
+                    <li class="category__item">
+                      <a class="btn" href="#">Аналитика
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer__content">
+              <div class="popular-destinations">
+                <div class="popular-destinations__container">
+                  <h2 class="popular-destinations__heading">Популярные направления</h2>
+                  <ul class="popular-destinations__list">
+                    <li class="popular-destinations__item">
+                      <a class="btn" href="#">Веб-разработка
+                      </a>
+                    </li>
+                    <li class="popular-destinations__item">
+                      <a class="btn" href="#">Java-разработка
+                      </a>
+                    </li>
+                    <li class="popular-destinations__item">
+                      <a class="btn" href="#">Python-разработка
+                      </a>
+                    </li>
+                    <li class="popular-destinations__item">
+                      <a class="btn" href="#">SMM-продвижение
+                      </a>
+                    </li>
+                    <li class="popular-destinations__item">
+                      <a class="btn" href="#">Графический дизайн
+                      </a>
+                    </li>
+                    <li class="popular-destinations__item">
+                      <a class="btn" href="#">Дизайн интерьеров
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer__content">
+              <div class="info">
+                <div class="info__container">
+                  <h2 class="info__heading">Общая информация</h2>
+                  <ul class="info__list">
+                    <li class="info__item">
+                      <a class="btn" href="#">О проекте
+                      </a>
+                    </li>
+                    <li class="info__item">
+                      <a class="btn" href="#">Политика конфиденциальности
+                      </a>
+                    </li>
+                    <li class="info__item">
+                      <a class="btn" href="#">Пользовательское соглашение
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
