@@ -1,7 +1,12 @@
 .bunner {
-  padding: size(78px) size(65px) size(94px);
+  padding: size(78px) size(65px) size(93px);
   background-color: $color-default-white;
   border-radius: size(72px);
+
+  @include vp-1279 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   @include vp-1023 {
     padding: 0;
@@ -12,19 +17,25 @@
 
 .bunner__heading {
   margin: 0 auto;
-  margin-bottom: size(16px);
+  padding-bottom: size(50px);
   font-size: size(40px);
   line-height: size(48px);
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   max-width: size(997px);
 
   @include vp-1023 {
-    margin: 0 80px 35px;
+    margin: 0 80px;
+    padding-bottom: 35px;
     font-size: 21px;
     line-height: 25px;
     text-align: start;
     max-width: 997px;
+  }
+
+  @include vp-767 {
+    margin: 0 20px;
+    max-width: 234px;
   }
 }
 
@@ -33,38 +44,86 @@
   grid-template-columns: 37% 1fr;
   gap: size(50px);
 
-  @include vp-1023 {
+  @include vp-1279 {
     display: block;
+    margin-top: -45px;
   }
 }
 
 .bunner__list {
   margin: 0;
-  margin-top: size(128px);
+  margin-top: size(94px);
   padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: size(47px);
 
-  @include vp-1023 {
+  @include vp-1279 {
     display: none;
   }
 }
 
-.bunner__item {
+.bunner__button {
+  display: block;
   padding: size(23px) size(72px) size(23px) size(110px);
   position: relative;
   max-width: size(630px);
   background-color: #fafafa;
   border-radius: size(30px);
+  text-align: start;
+  transition: .5s;
+
+  .bunner__item--current & {
+    color: $color-default-white;
+    background-color: #486dd8;
+  }
+
+  @include hover {
+    background-color: #dde6ff;
+
+    .bunner__icon {
+      background-color: #edf2ff;
+
+      svg {
+        color: #839dfb;
+      }
+    }
+  }
+
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+.bunner__icon {
+  position: absolute;
+  width: size(60px);
+  height: size(60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: size(23px);
+  left: size(27px);
+  outline: size(1px) solid #f0f0f0;
+  border-radius: size(20px);
+  background-color: #f8f7fc;
+  transition: .5s;
 
   svg {
-    position: absolute;
-    width: size(60px);
-    height: size(60px);
-    top: size(23px);
-    left: size(27px);
+    width: size(25px);
+    height: size(25px);
+    color: #655bd5;
+    transition: .5s;
+  }
+
+  .bunner__item--current & {
+    outline: none;
+    background-color: #567ae4;
+
+    svg {
+      color: $color-default-white;
+    }
   }
 }
 
@@ -75,14 +134,18 @@
   line-height: size(40px);
   font-weight: 400;
   color: #181515;
+
+  .bunner__item--current & {
+    color: $color-default-white;
+  }
 }
 
 .bunner__text {
   margin: 0;
   line-height: size(26px);
   color: #747474;
-}
 
-.bunner__content {
-
+  .bunner__item--current & {
+    color: #97b2fe;
+  }
 }

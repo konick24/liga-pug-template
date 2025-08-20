@@ -1,32 +1,65 @@
+.bunner-content {
+  @include vp-1023 {
+    margin: 0 20px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
 .bunner-content__list {
   margin: 0;
   padding: 0;
   list-style: none;
 
+  @include vp-1279 {
+    margin: 0 0 25px;
+    padding: 45px 0 25px;
+    width: 425px;
+    display: flex;
+  }
+
   @include vp-1023 {
-    margin: 0 80px 25px;
     width: 280px;
-    align-items: stretch;
+  }
+
+  @include vp-767 {
+    margin: 0 0 8px;
+    display: flex;
+    gap: 0;
   }
 }
 
 .bunner-content__item {
+  display: none;
+
   img {
-    margin-bottom: size(70px);
     width: size(425px);
-    height: size(425px);
+    height: auto;
   }
 
-  @include vp-1023 {
+  &--current {
+    display: block;
+  }
+
+  @include vp-1279 {
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $color-default-white;
+    border: 1px solid #eeeeee;
     border-radius: 34px;
+  }
+
+  @include vp-1023 {
+    position: relative;
+    background-color: $color-default-white;
 
     img {
       margin-bottom: 0;
+      position: absolute;
+      top: -58px;
       width: 280px;
       height: 280px;
     }
@@ -38,8 +71,8 @@
   justify-content: center;
   gap: 10%;
 
-  // максимум до 1024px
-  @include vp-1024 {
+  // максимум до 1280px
+  @include vp-1280 {
     display: none;
   }
 }

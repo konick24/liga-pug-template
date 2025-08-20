@@ -5,11 +5,7 @@ mixin footer(footerMods)
         .footer__content
           .copyright
             .copyright__container
-              //- h2(area-label="Авторское право")
-              //- .copyright__title
-              //-   +icon("logo", 125, 41)
-
-              .copyright__title
+              +btn({href: "#"}).copyright__title
                 h2(area-label="Авторское право")
                 +icon("logo", 33, 39)
                 span.copyright__heading

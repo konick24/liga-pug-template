@@ -65,11 +65,11 @@ mixin secondaryNav()
   nav.secondary-nav
     .secondary-nav__list
       each list in sacondaryNavList
-        details.secondary-nav__item.detail
-          summary.detail__title
+        .secondary-nav__item.detail
+          +btn.detail__button
             span.detail__heading #{list.text}
             +icon("arrow", 10, 10)
-          if list.subList
+          if list.detailList.length > 0
             ul.detail__list
               each detail in list.detailList
                 li.ditail__item

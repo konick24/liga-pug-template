@@ -1,10 +1,10 @@
-<svg width="34" height="39" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill="currentColor" d="M15.008 38.957v-7.004h3.002v7.004z"/>
-<mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="33">
-<path transform="rotate(-26.999 0 11.118)" fill="currentColor" d="M0 11.118h12.506V34.63H0z"/>
-<path transform="rotate(-108.7 11.13 19.385)" fill="currentColor" d="M11.131 19.385h12.506v23.512H11.131z"/>
+<svg width="34" height="39" viewBox="0 0 34 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="15.2579" y="38.7072" width="6.50334" height="2.50128" transform="rotate(-90 15.2579 38.7072)" fill="currentColor" stroke="currentColor" stroke-width="0.500257"/>
+<mask id="mask0_558_1790" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="33">
+<rect x="0.33642" y="11.2271" width="12.0062" height="23.0118" transform="rotate(-26.999 0.33642 11.2271)" fill="currentColor" stroke="currentColor" stroke-width="0.500257"/>
+<rect x="11.2876" y="19.0675" width="12.0062" height="23.0118" transform="rotate(-108.7 11.2876 19.0675)" fill="currentColor" stroke="currentColor" stroke-width="0.500257"/>
 </mask>
-<g mask="url(#a)">
-<circle cx="16.509" cy="16.446" r="9.255" stroke="currentColor" stroke-width="2.501"/>
+<g mask="url(#mask0_558_1790)">
+<circle cx="16.5093" cy="16.4459" r="9.25475" stroke="currentColor" stroke-width="2.50128"/>
 </g>
 </svg>

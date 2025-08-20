@@ -25,18 +25,22 @@ mixin header(headerMods, currentUrl)
               | FindEdu
         else
           a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        span.header__menu-mobile
+          | Курсы
         nav.main-nav
-          button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-            +icon("icon-burger", 20, 20)
           .main-nav__wrapper
             ul.main-nav__list
               each link in headerLinks
                 - const activeState = currentUrl === link.href
                 li.main-nav__item
                   if(activeState)
-                    span.main-nav__link.is-active= link.text
+                    span.is-active= link.text
                   else
-                    a.main-nav__link(href=link.href)= link.text
+                    +btn({text: link.text, href: link.href})
+          button.main-nav__toggle.main-nav__toggle--burger.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+            +icon("icon-burger", 20, 20)
+          button.main-nav__toggle.main-nav__toggle--cross.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+            +icon("icon-cross", 20, 20)
     .header__container
       .container
         +secondaryNav()

@@ -15,19 +15,29 @@
       margin: 0;
     }
   }
+
+  @include vp-767 {
+    img {
+      display: none;
+    }
+  }
 }
 
 .direction__container {
   padding: size(51px) 0 size(149px);
 
   @include vp-1023 {
-    padding: 60px 0 49px;
+    padding: 60px 0 54px;
   }
 }
 
 .direction__title {
   @include vp-1023 {
     margin: 0 80px;
+  }
+
+  @include vp-767 {
+    margin: 0 20px;
   }
 }
 
@@ -36,7 +46,7 @@
   margin-bottom: size(58px);
   font-size: size(40px);
   line-height: size(50px);
-  font-weight: 600;
+  font-weight: 700;
 
   @include vp-1023 {
     margin-bottom: 28px;
@@ -53,22 +63,124 @@
   // до 1024px
   @include vp-1024 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 425px);
+    justify-content: center;
     gap: size(48px) size(20px);
   }
 
+  // до 1440px
+  @include vp-1440 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   @include vp-1023 {
-    margin: 0 80px 25px 80px;
+    margin: 0 0 30px;
     width: 283px;
   }
 }
 
 .direction__link {
+  position: relative;
+  height: 100%;
   padding: 0;
   display: block;
   color: #6b6b6b;
   background-color: $color-default-white;
   border-radius: size(56px);
+  transition: .5s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: size(56px);
+    transition: opacity .5s;
+  }
+
+  &::before {
+    background-image: linear-gradient(transparent 45%, #ffffff 84%);
+  }
+
+  &::after {
+    opacity: 0;
+  }
+
+  @include hover {
+    color: $color-default-white;
+    opacity: 1;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &--design {
+    @include direction-hover(#82b4ff);
+  }
+
+  &--programming {
+    @include direction-hover(#ff89ad);
+  }
+
+  &--managment {
+    @include direction-hover(#ffccbd);
+  }
+
+  &--analytics {
+    @include direction-hover(#ff9ebb);
+  }
+
+  &--marketing {
+    @include direction-hover(#ffb985);
+  }
+
+  &--finance {
+    @include direction-hover(#6cb7f2);
+  }
+
+  @include vp-1023 {
+    border-radius: 35px;
+
+    &::before,
+    &::after {
+      border-radius: 35px;
+    }
+
+    &::before {
+      background-image:
+        linear-gradient(transparent 45%, #ffffff 84%),
+        linear-gradient(to right, transparent 30%, #ffffff 96%);
+    }
+
+    &--design {
+      @include direction-hover(#82b4ff, to right);
+    }
+
+    &--programming {
+      @include direction-hover(#ff89ad, to right);
+    }
+
+    &--managment {
+      @include direction-hover(#ffccbd, to right);
+    }
+
+    &--analytics {
+      @include direction-hover(#ff9ebb, to right);
+    }
+
+    &--marketing {
+      @include direction-hover(#ffb985, to right);
+    }
+
+    &--finance {
+      @include direction-hover(#6cb7f2, to right);
+    }
+  }
 }
 
 .direction__buttons {
@@ -85,14 +197,14 @@
 .direction__button {
   position: static;
   margin: 0;
-  width: 50px;
-  height: 50px;
+  width: size(50px);
+  height: size(50px);
   background-color: #f8f7fc;
-  border: 1px solid #efefef;
+  border: size(1px) solid #efefef;
   border-radius: 50%;
 
   &::after {
-    font-size: 12px;
+    font-size: size(12px);
     color: #2b2b2b;
   }
 }

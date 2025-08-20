@@ -1,5 +1,5 @@
 .info {
-  @include vp-1023 {
+  @include vp-1279 {
     display: none;
   }
 }
@@ -9,7 +9,7 @@
 }
 
 h2.info__heading {
-  margin-bottom: size(52px);
+  margin-bottom: size(50px);
   font-size: size(20px);
   line-height: size(24px);
   font-weight: 500;

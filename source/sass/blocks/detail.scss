@@ -19,8 +19,21 @@
   }
 }
 
-.detail__title {
-  padding: size(6px) size(20px) size(6px) 0;
+.detail__button {
+  .detail & {
+    padding: size(6px) size(20px) size(6px) 0;
+    position: relative;
+    display: block;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include vp-1023 {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 
   svg {
     position: static;
@@ -28,34 +41,72 @@
     width: size(10px);
     height: size(10px);
     color: #bababa;
+    transition: .5s;
+  }
 
-    @include vp-1023 {
-      .detail[open] & {
+  &--open {
+    .detail__heading {
+      color: $color-accent-main;
+    }
+
+    svg {
+      color: $color-accent-main;
+      transform: rotate(180deg);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include vp-1024 {
+    &:hover ~ .detail__list{
+      display: flex;
+      min-width: max-content;
+      width: 100%;
+      position: absolute;
+      top: size(30px);
+      left: size(-26px);
+      z-index: 1;
+    }
+
+    @include hover {
+      .detail__heading {
+        color: $color-accent-main;
+      }
+
+      svg {
         color: $color-accent-main;
         transform: rotate(180deg);
       }
     }
   }
 
-  &::marker {
-    display: none;
-    content: "";
-  }
-
   @include vp-1023 {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include hover {
+      .detail__heading {
+        color: $color-accent-main;
+      }
+
+      svg {
+        color: $color-accent-main;
+      }
+    }
   }
 }
 
 .detail__heading {
   color: #bababa;
   line-height: size(19px);
+  transition: .5s;
 
   @include vp-1023 {
-    .detail[open] & {
+    .detail__list--open & {
       color: $color-accent-main;
     }
   }
@@ -63,33 +114,51 @@
 
 .detail__list {
   margin: 0;
-  padding: 15px;
+  padding: size(15px);
+  display: none;
   list-style: none;
-  display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: size(10px);
   font-size: size(12px);
   line-height: size(15px);
   background-color: $color-default-white;
 
-  .detail[open] & {
+
+  &--open {
+    display: flex;
     min-width: max-content;
     width: 100%;
     position: absolute;
-    top: 30px;
+    top: size(30px);
+    left: size(-26px);
+    z-index: 1;
+
 
     @include vp-1023 {
       position: static;
-      margin-top: 25px;
+      margin-top: 10px;
+      margin-left: -10px;
       padding: 15px 0 14px;
       background-color: #f8f7fc;
+    }
+  }
+
+  @include vp-1024 {
+    @include hover {
+      display: flex;
+      min-width: max-content;
+      width: 100%;
+      position: absolute;
+      top: size(30px);
+      left: size(-26px);
+      z-index: 1;
     }
   }
 }
 
 a.detail__link {
   display: block;
-  padding: 5px 10px;
+  padding: size(5px) size(10px);
   color: #454545;
   background-color: transparent;
 }

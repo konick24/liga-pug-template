@@ -3,12 +3,13 @@ mixin intro()
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     section.intro__section.about
+      +img("content", "bg-direction-mobile", "webp", 1191, 562)
       .container
         .about__container
           .about__content
             h1
               | FindEdu - все для <br>
-              | выбора новой профессии
+              | выбора новой профессии <br>
               | в одном месте
             p
               | Изучение тем на вебинарах с преподавателями, личные
@@ -17,7 +18,7 @@ mixin intro()
             +btn({text: "Сравнить курсы", href: "#", isExternal: true})
               +icon("icon-compare", 45, 45)
           article.about__suggestion.suggestion
-            +img("content", "bg-suggestion", "png", 646, 578)
+            +img("content", "bg-suggestion", "webp", 646, 578)
             .suggestion__content
               .suggestion__title
                 h2
@@ -37,9 +38,9 @@ mixin intro()
                 | UX/UI-дизайнер — одна из самых
                 | востребованных профессий 2020 года
               .suggestion__statistics
-                +img("content", "statistics", "png", 388, 152)
+                +img("content", "statistics", "webp", 388, 152)
     section.intro__section.direction
-      +img("content", "bg-direction", "png", 3023, 1426)
+      +img("content", "bg-direction", "webp", 3023, 1426)
       .container
         .direction__container
           .direction__title
@@ -48,7 +49,7 @@ mixin intro()
           .direction__swiper.swiper
             ul.direction__list.swiper-wrapper
               li.direction__item.swiper-slide
-                +btn({href: "#"}).direction__link
+                +btn({href: "#"}).direction__link.direction__link--design
                   .direction-item
                     .direction-item__title
                       .direction-item__icon
@@ -82,7 +83,7 @@ mixin intro()
                         span.direction-item__text
                           | Adobe After Effects
               li.direction__item.swiper-slide
-                +btn({href: "#"}).direction__link
+                +btn({href: "#"}).direction__link.direction__link--programming
                   .direction-item
                     .direction-item__title
                       .direction-item__icon
@@ -114,7 +115,7 @@ mixin intro()
                         span.direction-item__text
                           | Unity
               li.direction__item.swiper-slide
-                +btn({href: "#"}).direction__link
+                +btn({href: "#"}).direction__link.direction__link--managment
                   .direction-item
                     .direction-item__title
                       .direction-item__icon
@@ -148,7 +149,7 @@ mixin intro()
                         span.direction-item__text
                           | IT-рекрутмент
               li.direction__item.swiper-slide
-                +btn({href: "#"}).direction__link
+                +btn({href: "#"}).direction__link.direction__link--analytics
                   .direction-item
                     .direction-item__title
                       .direction-item__icon
@@ -180,7 +181,7 @@ mixin intro()
                         span.direction-item__text
                           | Нейронные сети
               li.direction__item.swiper-slide
-                +btn({href: "#"}).direction__link
+                +btn({href: "#"}).direction__link.direction__link--marketing
                   .direction-item
                     .direction-item__title
                       .direction-item__icon
@@ -214,7 +215,7 @@ mixin intro()
                         span.direction-item__text
                           | Google Ads
               li.direction__item.swiper-slide
-                +btn({href: "#"}).direction__link
+                +btn({href: "#"}).direction__link.direction__link--finance
                   .direction-item
                     .direction-item__title
                       .direction-item__icon
@@ -262,8 +263,8 @@ mixin intro()
               .bunner__content
                 .bunner-content.swiper
                   ul.bunner-content__list.swiper-wrapper
-                    li.bunner-content__item.swiper-slide
-                      +img("content", "user", "png", 425, 425)
+                    li(data-bunner-item='1').bunner-content__item.swiper-slide.bunner-content__item--current
+                      +img("content", "user", "webp", 425, 425)
                       .bunner__preview.preview
                         p.preview__heading
                           | 300+ довольных пользователей
@@ -272,8 +273,8 @@ mixin intro()
                           | кнопка «Объединить по строкам». С
                           | помощью неё можно объединить ячейки
                           | выбранного диапазона построчно.
-                    li.bunner-content__item.swiper-slide
-                      +img("content", "courses", "png", 425, 425)
+                    li(data-bunner-item='2').bunner-content__item.swiper-slide
+                      +img("content", "courses", "webp", 425, 425)
                       .bunner__preview.preview
                         p.preview__heading
                           | 1000+ образовательных курсов
@@ -282,8 +283,8 @@ mixin intro()
                           | кнопка «Объединить по строкам». С
                           | помощью неё можно объединить ячейки
                           | выбранного диапазона построчно.
-                    li.bunner-content__item.swiper-slide
-                      +img("content", "mentors", "png", 425, 425)
+                    li(data-bunner-item='3').bunner-content__item.swiper-slide
+                      +img("content", "mentors", "webp", 425, 425)
                       .bunner__preview.preview
                         p.preview__heading
                           | 20+ менторов больших компаний
@@ -296,27 +297,33 @@ mixin intro()
                     .bunner-content__button.bunner-content__button--prev.swiper-button-prev
                     .bunner-content__button.bunner-content__button--next.swiper-button-next
               ul.bunner__list
-                li.bunner__item
-                  +icon("icon-user", 60, 60)
-                  h3.bunner__item-heading
-                    | Довольные пользователи
-                  p.bunner__text
-                    | Изучение тем на вебинарах с преподавателями,
-                    | наставником. После прохождения курса вы будете
-                li.bunner__item
-                  +icon("icon-courses", 60, 60)
-                  h3.bunner__item-heading
-                    | Образовательные курсы
-                  p.bunner__text
-                    | Изучение тем на вебинарах с преподавателями,
-                    | наставником. После прохождения курса вы будете
-                li.bunner__item
-                  +icon("icon-mentors", 60, 60)
-                  h3.bunner__item-heading
-                    | Менторы из больших компаний
-                  p.bunner__text
-                    | Изучение тем на вебинарах с преподавателями,
-                    | наставником. После прохождения курса вы будете
+                li(data-bunner-content-item='1').bunner__item.bunner__item--current
+                  +btn().bunner__button
+                    .bunner__icon
+                      +icon("icon-user", 25, 25)
+                    h3.bunner__item-heading
+                      | Довольные пользователи
+                    p.bunner__text
+                      | Изучение тем на вебинарах с преподавателями,
+                      | наставником. После прохождения курса вы будете
+                li(data-bunner-content-item='2').bunner__item
+                  +btn().bunner__button
+                    .bunner__icon
+                      +icon("icon-courses", 25, 25)
+                    h3.bunner__item-heading
+                      | Образовательные курсы
+                    p.bunner__text
+                      | Изучение тем на вебинарах с преподавателями,
+                      | наставником. После прохождения курса вы будете
+                li(data-bunner-content-item='3').bunner__item
+                  +btn().bunner__button
+                    .bunner__icon
+                      +icon("icon-mentors", 25, 25)
+                    h3.bunner__item-heading
+                      | Менторы из больших компаний
+                    p.bunner__text
+                      | Изучение тем на вебинарах с преподавателями,
+                      | наставником. После прохождения курса вы будете
 
 
 

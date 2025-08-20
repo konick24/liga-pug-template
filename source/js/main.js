@@ -3,6 +3,10 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+import {initAccordions} from './modules/accordions/custom-accordions';
+import './modules/bunners/bunners';
+
+import {initSwiper} from './modules/custom-swiper/init-swiper';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -20,68 +24,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // пользовательские скрипты
 
-  const buttonMenu = document.querySelector('.main-nav__toggle');
+  const buttonMenuOpen = document.querySelector('.main-nav__toggle--burger');
+  const buttonMenuClose = document.querySelector('.main-nav__toggle--cross');
   const menu = document.querySelector('.secondary-nav');
-  let swiperInstance;
 
-  buttonMenu.addEventListener('click', () => {
-    menu.classList.toggle('secondary-nav--open');
+  buttonMenuOpen.addEventListener('click', () => {
+    buttonMenuOpen.classList.add('main-nav__toggle--open');
+    menu.classList.add('secondary-nav--open');
   });
 
-  const initSwiper = () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 1024 && !swiperInstance) {
-      swiperInstance = new Swiper('.swiper', {
-        slidesPerView: 'auto',
-        spaceBetween: 12,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          1920: {
-            slidesPerView: 'auto',
-          },
-        },
-      });
+  buttonMenuClose.addEventListener('click', () => {
+    buttonMenuOpen.classList.remove('main-nav__toggle--open');
+    menu.classList.remove('secondary-nav--open');
+  });
 
-      // const swiperBunners = new Swiper('.bunner-content', {
-      //   slidesPerView: 'auto',
-      //   spaceBetween: 12,
-      //   loop: true,
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     clickable: true,
-      //   },
-      //   navigation: {
-      //     nextEl: '.swiper-button-next',
-      //     prevEl: '.swiper-button-prev',
-      //   },
-      //   breakpoints: {
-      //     1920: {
-      //       slidesPerView: 'auto',
-      //     },
-      //   },
-      // });
-    } else if (screenWidth >= 1024 && swiperInstance) {
-      swiperInstance.forEach((swiper) => {
-        swiper.destroy(true, true);
-      });
-      // swiperInstance.destroy(true, true);
-      swiperInstance = undefined;
-    }
-  };
-
-  window.addEventListener('load', initSwiper);
-  window.addEventListener('resize', initSwiper);
-
+  window.addEventListener('resize', () => {
+    initSwiper();
+    initAccordions();
+  });
 
   window.addEventListener('load', () => {
+    initSwiper();
+    initAccordions();
     initModals();
     uploadFile();
     uploadImageDrop();

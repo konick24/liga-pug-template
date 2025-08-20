@@ -1,3 +1,22 @@
+@mixin direction-hover($color, $direction: 'to bottom') {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      background-color: $color;
+      top: -6px;
+
+      &::after {
+        opacity: 1;
+        @if $direction != 'to bottom' {
+          background-image: linear-gradient($direction, transparent 30%, $color 96%);
+        } @else {
+          background-image: linear-gradient(transparent 45%, $color 84%);
+        }
+      }
+      @content;
+    }
+  }
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
@@ -82,11 +101,11 @@
 //   }
 // }
 
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}
 
 @mixin vp-1024 {
   @media (min-width: $vp-1024) {
@@ -94,17 +113,17 @@
   }
 }
 
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
+@mixin vp-1280 {
+  @media (min-width: $vp-1280) {
+    @content;
+  }
+}
 
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
+@mixin vp-1440 {
+  @media (min-width: $vp-1440) {
+    @content;
+  }
+}
 
 // @mixin vp-1920 {
 //   @media (min-width: $vp-1920) {
